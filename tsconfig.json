@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+
+    // 采用的模块系统
+    "module": "es6",
+    // 编译输出目标 ES 版本
+    "target": "ES6",
+    "experimentalDecorators": true
+  }
+}
