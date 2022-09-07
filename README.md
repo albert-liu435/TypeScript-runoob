@@ -1,63 +1,17 @@
-## TypeScript-runoob
+ts-node : 无法加载文件 C:\Users\Dell\AppData\Roaming\npm\ts-node.ps1，因为在此系统上禁止运行脚本。有关详细信息 3. 具体步骤
 
-### 配置typescript环境
+以管理员身份打开终端(或者 vs code)；
+在终端执行: get-ExecutionPolicy，显示 Restricted(表示状态是禁止的)；
+在终端执行: set-ExecutionPolicy RemoteSigned；
+在终端执行: get-ExecutionPolicy，显示 RemoteSigned；
+喝杯枸杞水庆祝成功。
+————————————————
+版权声明：本文为 CSDN 博主「想念如果有声音\_\_\_」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_19249021/article/details/121355440
 
-首先安装nodejs的环境，然后执行如下命令安装TypeScript,并查看版本
+配置运行环境
+https://blog.csdn.net/falwat/article/details/122165181
 
-```typescript
-//安装typescript
-npm install -g typescript
-//查看版本信息
-tsc -v
+https://www.php.cn/tool/vscode/470137.html
 
-```
-
-### 运行第一个typescript程序
-
-编写HelloWorld.ts文件
-
-```typescript
-let str:string='hello World';
-console.log(str)
-```
-
-执行如下命令并执行
-
-```typescript
-//编译
-tsc HelloWorl.ts
-//执行
-node HelloWorl.js
-```
-
-## 配置webstorm开发环境
-
-首先在项目中创建tscconfig.json文件并填写如下信息
-
-```json
-{
-    "compilerOptions": {
-        // 采用的模块系统
-        "module": "es6",
-        // 编译输出目标 ES 版本
-        "target": "ES6",
-        "experimentalDecorators": true
-    }
-}
-```
-
-可以参考进行详细配置 [tsconfig](https://www.tslang.cn/docs/handbook/tsconfig-json.html)
-
-配置webstorm
-
-![1658305361129](./pic/1658305361129.png)
-
-![1658305381437](./pic/1658305381437.png)
-
-[参考](https://zhuanlan.zhihu.com/p/354802951)
-
-文档
-
-[官方文档](https://www.tslang.cn/docs/home.html)
-
-[菜鸟教程](https://www.runoob.com/typescript/ts-tutorial.html)
+Terminal ->run task tsc:build-tsconfig.json
