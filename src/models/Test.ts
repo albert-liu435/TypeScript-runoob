@@ -1,0 +1,1 @@
+import someInterfaceRef = require("./SomeInterface");
